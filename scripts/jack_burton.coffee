@@ -5,7 +5,7 @@
 
 no_fucks = [
   "http://hubot-assets.s3.amazonaws.com/jack_burton/1.gif",
-"http://hubot-assets.s3.amazonaws.com/jack_burton/2gif",
+"http://hubot-assets.s3.amazonaws.com/jack_burton/2.gif",
 "http://hubot-assets.s3.amazonaws.com/jack_burton/3.gif",
 "http://hubot-assets.s3.amazonaws.com/jack_burton/4.gif",
 "http://hubot-assets.s3.amazonaws.com/jack_burton/5.gif",
