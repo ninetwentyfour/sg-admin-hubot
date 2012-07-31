@@ -20,7 +20,7 @@ module.exports = (robot) ->
     token = process.env.HUBOT_PIVOTAL_TOKEN
 
 
-    msg.http("https://www.pivotaltracker.com/services/v3/projects/#{process.env.HUBOT_PIVOTAL_PROJECT}/iterations/current").headers("X-TrackerToken": token).query(filter: "state:unstarted").get() (err, res, body) ->
+    msg.http("https://www.pivotaltracker.com/services/v3/projects/#{process.env.HUBOT_PIVOTAL_PROJECT}/iterations/current").headers("X-TrackerToken": token).query(filter: "state:unstarted,started,finished,delivered").get() (err, res, body) ->
       if err
         msg.send "Pivotal says: #{err}"
         return
