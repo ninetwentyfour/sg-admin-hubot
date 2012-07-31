@@ -31,7 +31,7 @@ module.exports = (robot) ->
           message += " (#{story.owned_by})" if story.owned_by
           message += " is #{story.current_state}" if story.current_state && story.current_state != "unstarted"
           msg.send message
-          return
+      return
 
 
   robot.respond /(pivotal story)? (.*)/i, (msg)->
