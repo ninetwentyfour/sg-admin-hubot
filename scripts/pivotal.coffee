@@ -19,7 +19,8 @@ module.exports = (robot) ->
     Parser = require("xml2js").Parser
     token = process.env.HUBOT_PIVOTAL_TOKEN
 
-    msg.http("https://www.pivotaltracker.com/services/v3/projects/#{process.env.HUBOT_PIVOTAL_PROJECT}/iterations/current").headers("X-TrackerToken": token).query(filter: "state:unstarted,started,finished,delivered").get() (err, res, body) ->
+
+    msg.http("https://www.pivotaltracker.com/services/v3/projects/446445/iterations/current").headers("X-TrackerToken": token).query(filter: "state:unstarted,started,finished,delivered").get() (err, res, body) ->
       if err
         msg.send "Pivotal says: #{err}"
         return
@@ -30,8 +31,8 @@ module.exports = (robot) ->
           message += " (#{story.owned_by})" if story.owned_by
           message += " is #{story.current_state}" if story.current_state && story.current_state != "unstarted"
           msg.send message
-    return
-        msg.send "No project #{project_name}"
+          return
+
 
   robot.respond /(pivotal story)? (.*)/i, (msg)->
     Parser = require("xml2js").Parser
