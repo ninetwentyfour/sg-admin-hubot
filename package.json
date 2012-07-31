@@ -23,7 +23,8 @@
     "xml2js": "0.1.14",
     "redis": "0.7.2",
     "cradle": "0.6.3",
-    "soupselect": "0.2.0"
+    "soupselect": "0.2.0",
+    "jsdom": "0.2.14"
   },
 
   "engines": {
