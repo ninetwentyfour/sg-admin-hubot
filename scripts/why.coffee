@@ -20,5 +20,5 @@ no_fucks = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(why|processmaker).*/i, (msg) ->
+  robot.respond /.*(why|processmaker).*/i, (msg) ->
     msg.send msg.random no_fucks

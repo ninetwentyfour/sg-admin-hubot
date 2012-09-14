@@ -17,5 +17,5 @@ lols = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(lol|lul|lolz|lulz).*/i, (msg) ->
+  robot.respond /.*(lol|lul|lolz|lulz).*/i, (msg) ->
     msg.send msg.random lols
