@@ -15,6 +15,9 @@ no_fucks = [
 
 ]
 
+rand = [1..5]
+
 module.exports = (robot) ->
   robot.hear /.*(fuck yeah|awesome|nice).*/i, (msg) ->
-    msg.send msg.random no_fucks
+    if rand.random == 1
+      msg.send msg.random no_fucks
