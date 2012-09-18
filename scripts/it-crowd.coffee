@@ -4,5 +4,5 @@
 #
 
 module.exports = (robot) ->
-  robot.hear /.*(doesn't work|won't work|broken).*/i, (msg) ->
+  robot.respond /.*(doesn't work|won't work|broken).*/i, (msg) ->
     msg.send "Have you tried turning it off and back on again?"

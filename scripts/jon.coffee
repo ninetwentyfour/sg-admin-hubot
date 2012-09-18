@@ -12,5 +12,5 @@ carltons = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(jon).*/i, (msg) ->
+  robot.respond /.*(jon).*/i, (msg) ->
     msg.send msg.random carltons

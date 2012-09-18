@@ -9,5 +9,5 @@ carltons = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(oh yeah).*/i, (msg) ->
+  robot.respond /.*(oh yeah).*/i, (msg) ->
     msg.send msg.random carltons
