@@ -1,6 +1,6 @@
-# Carlton Celebration
+# Hulk Smash
 #
-# dance - Display a dancing Carlton
+# 
 #
 
 carltons = [
@@ -14,5 +14,5 @@ carltons = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(hulk smash|hulk|angry|pissed|smash|rage|destroy).*/i, (msg) ->
+  robot.hear /.*(hulk smash|hulk|angry|pissed|smash|\srage|^rage$|^rage\s|destroy).*/i, (msg) ->
     msg.send msg.random carltons
