@@ -1,6 +1,6 @@
-# Carlton Celebration
+# Troll Face
 #
-# dance - Display a dancing Carlton
+# troll - Display trollface
 #
 
 carltons = [
@@ -9,5 +9,5 @@ carltons = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /.*(troll|trollface).*/i, (msg) ->
+  robot.respond /.*(troll\s|\stroll|^troll$).*/i, (msg) ->
     msg.send msg.random carltons
