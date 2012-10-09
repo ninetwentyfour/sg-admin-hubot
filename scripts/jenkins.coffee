@@ -28,7 +28,7 @@ hackers = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /build branch (.+) on job (.+)/i, (msg)->
+  robot.respond /build web_rails/i, (msg)->
 
     # url = process.env.HUBOT_JENKINS_URL
     # job = msg.match[5]
@@ -41,8 +41,11 @@ module.exports = (robot) ->
     # branch = "origin/#{branch}" unless ~branch.indexOf("/")
     # 
     json_val = JSON.stringify {"parameter": [{"name": job_parameter, "value": branch}]}
-    path = "http://192.168.50.42:8080/job/#{job}/build"
-    msg.http("http://192.168.50.42:8080/job/#{job}/build")
+    
+    # process.env.JENKINS_URL
+    # path = "http://192.168.50.42:8080/job/#{job}/build"
+    path = process.env.JENKINS_URL
+    msg.http("#{process.env.JENKINS_URL}")
     #msg.http("http://192.168.50.42:8080/job/boss/build")
       .query(json: json_val)
       .post() (err, res, body) ->
