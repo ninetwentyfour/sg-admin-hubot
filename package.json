@@ -14,6 +14,11 @@
     "url":  "https://github.com/github/hubot.git"
   },
 
+  "engines": {
+    "node": "0.6.x",
+    "npm": "1.0.x"
+  },
+
   "dependencies": {
     "hubot-hipchat": ">= 1.0.9",
     "hubot": "2.3.2",
@@ -25,11 +30,6 @@
     "cradle": "0.6.3",
     "soupselect": "0.2.0",
     "jsdom": "0.2.14"
-  },
-
-  "engines": {
-    "node": "0.6.x",
-    "npm": "1.1.x"
   }
 }
 
