@@ -49,8 +49,9 @@ module.exports = (robot) ->
       msg.send url
 
   robot.hear /(.*) (ALL the .*)/i, (msg) ->
-    memeGenerator msg, 6013, 1121885, msg.match[1], msg.match[2], (url) ->
-      msg.send url
+    if msg.split(" ").count < 10
+      memeGenerator msg, 6013, 1121885, msg.match[1], msg.match[2], (url) ->
+        msg.send url
 
   robot.hear /(.*) (\w+\sTOO DAMN .*)/i, (msg) ->
     memeGenerator msg, 998, 203665, msg.match[1], msg.match[2], (url) ->
