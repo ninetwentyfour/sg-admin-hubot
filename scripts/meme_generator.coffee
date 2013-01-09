@@ -36,11 +36,11 @@ module.exports = (robot) ->
     memeGenerator msg, 2, 166088, "Y U NO", caption, (url) ->
       msg.send url
 
-  robot.hear /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, (msg) ->
+  robot.respond /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, (msg) ->
     memeGenerator msg, 74, 2485, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(.*)(O\s?RLY\??.*)/i, (msg) ->
+  robot.respond /(.*)(O\s?RLY\??.*)/i, (msg) ->
     memeGenerator msg, 920, 117049, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
@@ -48,52 +48,52 @@ module.exports = (robot) ->
     memeGenerator msg, 121, 1031, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(.*) (ALL the .*)/i, (msg) ->
+  robot.respond /(.*) (ALL the .*)/i, (msg) ->
     if msg.split(" ").count < 10
       memeGenerator msg, 6013, 1121885, msg.match[1], msg.match[2], (url) ->
         msg.send url
 
-  robot.hear /(.*) (\w+\sTOO DAMN .*)/i, (msg) ->
+  robot.respond /(.*) (\w+\sTOO DAMN .*)/i, (msg) ->
     memeGenerator msg, 998, 203665, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(GOOD NEWS EVERYONE[,.!]?) (.*)/i, (msg) ->
+  robot.respond /(GOOD NEWS EVERYONE[,.!]?) (.*)/i, (msg) ->
     memeGenerator msg, 1591, 112464, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /khanify (.*)/i, (msg) ->
+  robot.respond /khanify (.*)/i, (msg) ->
     memeGenerator msg, 6443, 1123022, "", khanify(msg.match[1]), (url) ->
       msg.send url
       
-  robot.hear /kahnify (.*)/i, (msg) ->
+  robot.respond /kahnify (.*)/i, (msg) ->
     memeGenerator msg, 6443, 1123022, "", khanify(msg.match[1]), (url) ->
       msg.send url
 
-  robot.hear /(NOT SURE IF .*) (OR .*)/i, (msg) ->
+  robot.respond /(NOT SURE IF .*) (OR .*)/i, (msg) ->
     memeGenerator msg, 305, 84688, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(YO DAWG .*) (SO .*)/i, (msg) ->
+  robot.respond /(YO DAWG .*) (SO .*)/i, (msg) ->
     memeGenerator msg, 79, 108785, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(ALL YOUR .*) (ARE BELONG TO US)/i, (msg) ->
+  robot.respond /(ALL YOUR .*) (ARE BELONG TO US)/i, (msg) ->
     memeGenerator msg, 349058, 2079825, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(IF .*), ((ARE|CAN|DO|DOES|HOW|IS|MAY|MIGHT|SHOULD|THEN|WHAT|WHEN|WHERE|WHICH|WHO|WHY|WILL|WON\'T|WOULD)[ \'N].*)/i, (msg) ->
+  robot.respond /(IF .*), ((ARE|CAN|DO|DOES|HOW|IS|MAY|MIGHT|SHOULD|THEN|WHAT|WHEN|WHERE|WHICH|WHO|WHY|WILL|WON\'T|WOULD)[ \'N].*)/i, (msg) ->
     memeGenerator msg, 17, 984, msg.match[1], msg.match[2] + (if msg.match[2].search(/\?$/)==(-1) then '?' else ''), (url) ->
       msg.send url
 
-  robot.hear /(.*) FUCK YOU/i, (msg) ->
+  robot.respond /(.*) FUCK YOU/i, (msg) ->
     memeGenerator msg, 1189472, 5044147, msg.match[1], 'FUCK YOU', (url) ->
       msg.send url
 
-  robot.hear /((Oh|You) .*) ((Please|Tell) .*)/i, (msg) ->
+  robot.respond /((Oh|You) .*) ((Please|Tell) .*)/i, (msg) ->
     memeGenerator msg, 542616, 2729805, msg.match[1], msg.match[3], (url) ->
       msg.send url
 
-  robot.hear /(.*) (You'?re gonna have a bad time)/i, (msg) ->
+  robot.respond /(.*) (You'?re gonna have a bad time)/i, (msg) ->
     memeGenerator msg, 825296, 3786537, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
